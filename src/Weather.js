@@ -37,7 +37,7 @@ export default function Weather(){
       <button type="submit">Search</button>
     </form>
     );
-
+if (message) {
     return (
       <div>
         {form}
@@ -52,4 +52,7 @@ export default function Weather(){
         </ul>
       </div>
     );
+} else {
+return(form);
+}
 }
