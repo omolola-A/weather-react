@@ -12,6 +12,7 @@ export default function Weather(){
     function displayWeather(response) {
     setMessage(true);
     setWeather({
+      city: response.data.name,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
@@ -42,6 +43,7 @@ if (message) {
       <div>
         {form}
         <ul>
+          <li>City: {weather.city}</li>
           <li>Temperature: {Math.round(weather.temperature)}</li>
           <li>Description: {weather.description}</li>
           <li>Humidity: {weather.humidity}%</li>
