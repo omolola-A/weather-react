@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Weather from './Weather';
+import Gitlink from './Gitlink';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
     <Weather/>
+    <br/>
+    <Gitlink/>
   </React.StrictMode>
 );
 
