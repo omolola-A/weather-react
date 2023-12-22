@@ -6,9 +6,9 @@ function App() {
     <div className="App">
       
 
-        <p>
-          Hello World
-        </p>
+        <h2>
+          Wish to know the current weather of your city?
+        </h2>
         
       
     </div>
