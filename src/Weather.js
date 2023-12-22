@@ -9,9 +9,6 @@ export default function Weather(){
     }
 
 
-
-
-
     function handleSubmit(event) {
      event.preventDefault();
     let apiKey = "3fdc8cfbf2d6fa0116c9ae92d3df4f79";
@@ -19,9 +16,12 @@ export default function Weather(){
     axios.get(apiUrl).then(displayWeather);
     }
     
+    function updateCity(event) {
+      
+    }
 
     let form = (<form onSubmit={handleSubmit}>
-      <input type="search" placeholder="Enter a city.."/>
+      <input type="search" placeholder="Enter a city.." onChange={updateCity}/>
       <button type="submit">Search</button>
     </form>
     );
