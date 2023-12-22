@@ -1,9 +1,11 @@
-import React from "react";
+import React,{useState} from "react";
 import axios from "axios";
 
 
 
 export default function Weather(){
+    const [city, setCity]= useState("");
+
     function displayWeather(response) {
       alert(`Temperature in ${response.data.name} ${response.data.main.temp}⁰C`);
     }
@@ -17,7 +19,7 @@ export default function Weather(){
     }
     
     function updateCity(event) {
-      
+
     }
 
     let form = (<form onSubmit={handleSubmit}>
