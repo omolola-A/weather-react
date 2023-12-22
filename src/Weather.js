@@ -7,7 +7,7 @@ export default function Weather(){
     const [city, setCity]= useState("");
 
     function displayWeather(response) {
-      alert(`Temperature in ${response.data.name} ${response.data.main.temp}⁰C`);
+    
     }
 
 
@@ -19,7 +19,7 @@ export default function Weather(){
     }
     
     function updateCity(event) {
-
+      setCity(event.target.value);
     }
 
     let form = (<form onSubmit={handleSubmit}>
@@ -29,8 +29,17 @@ export default function Weather(){
     );
 
     return (
-<div>
-{form}
-</div>
+      <div>
+        {form}
+        <ul>
+          <li>Temperature: {Math.round(weather.temperature)}</li>
+          <li>Description: {weather.description}</li>
+          <li>Humidity: {weather.humidity}%</li>
+          <li>Wind: {weather.wind}km/h</li>
+          <li>
+            <img src={weather.icon} alt={weather.description} />
+          </li>
+        </ul>
+      </div>
     );
 }
