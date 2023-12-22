@@ -5,9 +5,19 @@ import axios from "axios";
 
 export default function Weather(){
     const [city, setCity]= useState("");
+    const [message, setMessage]= useState(false);
+    const [weather, setWeather]= useState({});
+
 
     function displayWeather(response) {
-    
+    setMessage(true);
+    setWeather({
+      temperature: response.data.main.temp,
+      wind: response.data.wind.speed,
+      humidity: response.data.main.humidity,
+      icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      description: response.data.weather[0].description,
+    });
     }
 
 
